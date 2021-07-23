@@ -19,9 +19,10 @@ describe('ToDo', () => {
 
   describe('GET getToDoById',() => {
     it('should fetch toDo by Id', (done) => {
-      // getToDoById(1).then((res) => {
-      //   expect(res.id).toBe(1);
-      // });
+      getToDoById(1).then((res) => {
+        expect(res.id).toBe(1);
+        expect(res.userId).toBe(2);
+      });
   
       sinon
         .stub(ToDoService, "fetchToDoById")
