@@ -5,6 +5,7 @@ const {getToDoById} = require('../axios/todo');
 
 describe('ToDo', () => {
   describe('GET getToDoById', () => {
+
     beforeEach(() => {
       jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
       nock('https://jsonplaceholder.typicode.com').get('/todos/1').reply(200, {
@@ -26,7 +27,8 @@ describe('ToDo', () => {
       expect(response.title).toEqual("delectus aut autem");
       done();
     });
-  })
+  });
+
   describe('with mocks', () => {
     beforeEach(() => {
       sinon
@@ -46,8 +48,8 @@ describe('ToDo', () => {
     afterEach(() => {
     });
 
-    it('with mocks', () => {
-      const response = ToDoService.fetchToDoById(1);
+    it('with mocks', async () => {
+      const response = await ToDoService.fetchToDoById(1);
       expect(response.status).toEqual(true);
       expect(response.data.userId).toEqual(1);
       expect(response.data.id).toEqual(1);
