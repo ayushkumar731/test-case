@@ -3,7 +3,6 @@ const {getToDoById} = require('../axios/todo');
 
 const ToDoService = {
   fetchToDoById: async (id,res) => {
-    console.log(id);
     const data = await getToDoById (id);
     const ToDo = new Todo({
       title: data.title,
