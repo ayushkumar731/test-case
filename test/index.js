@@ -22,6 +22,7 @@ describe('ToDo', () => {
       getToDoById(1).then((res) => {
         expect(res.id).toBe(1);
         expect(res.userId).toBe(2);
+        expect(res.title).toBe(2);
       });
   
       sinon
