@@ -14,6 +14,7 @@
     "assert": "^2.0.0",
     "jasmine": "^3.8.0",
     "nock": "^13.1.1",
+    "node-mocks-http": "^1.10.1",
     "nodemon": "^2.0.12",
     "sinon": "^11.1.1"
   },

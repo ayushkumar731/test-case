@@ -5,6 +5,6 @@ const getToDoById = async (id) => {
     .get(`https://jsonplaceholder.typicode.com/todos/${id}`)
     .then(res => res.data)
     .catch(error => console.log(error));
-}
+};
 
-module.exports = { getToDoById }
+module.exports = { getToDoById };
